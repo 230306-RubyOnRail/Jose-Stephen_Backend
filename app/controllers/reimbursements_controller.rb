@@ -3,12 +3,21 @@ class ReimbursementsController < ApplicationController
     # GET /reimbursements or /reimbursements.json
     def index
       @reimbursements = Reimbursement.all
+      render json: { reimbursements: @reimbursements }, status: :ok
     end
   
     # GET /reimbursements/1 or /reimbursements/1.json
     def show
-      @user = User.where(id: params[:id], user_id: params[:user_id]).first
+      @reimbursement = Reimbursement.where(id: params[:id], reimbursement_id: params[:reimbursement_id]).first
+      render json: { reimbursements: @reimbursements }, status: :ok
     end
+
+    def myReimbursements
+      @reimbursements = Reimbursement.where(user_id: params[:id]).all
+      render json: { reimbursements: @reimbursements }, status: :ok
+    end
+
+    
   
     # GET /reimbursements/new
     def new
