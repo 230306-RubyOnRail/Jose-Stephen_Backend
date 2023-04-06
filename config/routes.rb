@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post '/auth/login', to: 'sessions#create'
   post '/auth/register', to: 'users#create'
 
-  get '/reimbursements/user/:id', to: 'reimbursements#myReimbursements'
+  get '/user/:id/reimbursements', to: 'reimbursements#myReimbursements'
   # Defines the root path route ("/")
   # root "articles#index"
 end
