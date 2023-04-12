@@ -30,37 +30,32 @@ class ReimbursementsController < ApplicationController
   
     # POST /reimbursements or /reimbursements.json
     def create
-      @reimbursement = Reimbursement.new(reimbursement_params)
-  
-      respond_to do |format|
-        if @reimbursement.save
-          format.html { redirect_to reimbursement_url(@reimbursement), notice: "Reimbursement was successfully created." }
-          format.json { render :show, status: :created, location: @reimbursement }
-        else
-          format.html { render :new, status: :unprocessable_entity }
-          format.json { render json: @reimbursement.errors, status: :unprocessable_entity }
-        end
+      @user = User.new(reimbursement_params)
+
+      if @user.save
+        redirect_to @user, notice: 'User was successfully created.'
+      else
+        render :new
       end
     end
   
     # PATCH/PUT /reimbursements/1 or /reimbursements/1.json
     def update
-      respond_to do |format|
-        if @reimbursement.update(reimbursement_params)
-          format.html { redirect_to reimbursement_url(@reimbursement), notice: "Reimbursement was successfully updated." }
-          format.json { render :show, status: :ok, location: @reimbursement }
-        else
-          format.html { render :edit, status: :unprocessable_entity }
-          format.json { render json: @reimbursement.errors, status: :unprocessable_entity }
-        end
+      @reimbursement = Reimbursement.find(params[:id])
+
+      if @reimbursement.update(reimbursement_params)
+        redirect_to @reimbursement, notice: 'Reimbursement was successfully updated.'
+      else
+        render :edit
       end
-    end
+      end
+
   
     # DELETE /reimbursements/1 or /reimbursements/1.json
     def destroy
       @reimbursement.destroy
-  
-      respond_to do |format|
+
+      respond_to? do |format|
         format.html { redirect_to reimbursements_url, notice: "Reimbursement was successfully destroyed." }
         format.json { head :no_content }
       end

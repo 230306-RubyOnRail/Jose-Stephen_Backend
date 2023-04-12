@@ -23,6 +23,6 @@ User.create([
 # user_id
 # insert into reimbursements (client_id, amount, created_at, status, reason) values 
 Reimbursement.create([
-    {amount:20.00, description:'reimbusement for tolls', status:'recieved', user_id:"1"},
-    {amount:30.00, description:'reimbusement for food', status:'recieved', user_id:"2"}
+    {amount:20.00, description:'reimbusement for tolls', status:'received', user_id:"1"},
+    {amount:30.00, description:'reimbusement for food', status:'received', user_id:"2"}
 ])
