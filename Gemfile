@@ -51,3 +51,7 @@ gem "jwt", "~> 2.7"
 gem "bcrypt", "~> 3.1"
 
 gem "pg", "~> 1.4"
+
+gem 'simplecov', require: false, group: :test
+
+gem 'minitest'
