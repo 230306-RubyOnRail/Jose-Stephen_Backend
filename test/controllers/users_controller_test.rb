@@ -1,7 +1,7 @@
 require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test "should get all users" do
     assert :success
   end
 end

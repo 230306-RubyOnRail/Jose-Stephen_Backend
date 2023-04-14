@@ -1,0 +1,65 @@
+{
+  "Minitest": {
+    "coverage": {
+      "C:/Users/frzfe/Desktop/ruby_on_rails_cohort/project_1/Jose-Stephen_Backend/test/controllers/reimbursements_controller_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "C:/Users/frzfe/Desktop/ruby_on_rails_cohort/project_1/Jose-Stephen_Backend/test/controllers/users_controller_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "C:/Users/frzfe/Desktop/ruby_on_rails_cohort/project_1/Jose-Stephen_Backend/test/models/reimbursement_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "C:/Users/frzfe/Desktop/ruby_on_rails_cohort/project_1/Jose-Stephen_Backend/test/models/user_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1681460399
+  }
+}
