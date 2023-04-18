@@ -8,8 +8,8 @@ class ReimbursementsController < ApplicationController
   
     # GET /reimbursements/1 or /reimbursements/1.json
     def show
-      @reimbursement = Reimbursement.where(id: params[:id], reimbursement_id: params[:reimbursement_id]).first
-      render json: { reimbursements: @reimbursements }, status: :ok
+      @reimbursement = Reimbursement.find(params[:id])
+      render json: @reimbursement, status: :ok
     end
 
     def myReimbursements
@@ -22,6 +22,7 @@ class ReimbursementsController < ApplicationController
     # GET /reimbursements/new
     def new
       @reimbursement = Reimbursement.new
+      @reimbursement.save
     end
   
     # GET /reimbursements/1/edit
@@ -30,35 +31,21 @@ class ReimbursementsController < ApplicationController
   
     # POST /reimbursements or /reimbursements.json
     def create
-      @user = User.new(reimbursement_params)
-
-      if @user.save
-        redirect_to @user, notice: 'User was successfully created.'
-      else
-        render :new
-      end
+      @reimbursement = Reimbursement.new(reimbursement_params)
+      @reimbursement.save
     end
   
     # PATCH/PUT /reimbursements/1 or /reimbursements/1.json
     def update
       @reimbursement = Reimbursement.find(params[:id])
-
-      if @reimbursement.update(reimbursement_params)
-        redirect_to @reimbursement, notice: 'Reimbursement was successfully updated.'
-      else
-        render :edit
-      end
+      @reimbursement.update(reimbursement_params)
       end
 
   
     # DELETE /reimbursements/1 or /reimbursements/1.json
     def destroy
+      @reimbursement = Reimbursement.find(params[:id])
       @reimbursement.destroy
-
-      respond_to? do |format|
-        format.html { redirect_to reimbursements_url, notice: "Reimbursement was successfully destroyed." }
-        format.json { head :no_content }
-      end
     end
   
     private

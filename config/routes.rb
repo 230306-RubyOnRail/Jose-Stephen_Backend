@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   patch 'reimbursements/id', to: 'reimbursements#update'
 
+  get 'reimbursements/id', to: 'reimbursements#show'
   get '/user/:id/reimbursements', to: 'reimbursements#myReimbursements'
   # Defines the root path route ("/")
   # root "articles#index"
