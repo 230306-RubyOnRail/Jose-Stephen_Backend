@@ -8,6 +8,8 @@ WORKDIR /rails
 ENV RAILS_ENV="development"
 
 COPY Gemfile Gemfile.lock
+
+RUN gem install bundler
 RUN bundle install
 
 COPY . .
