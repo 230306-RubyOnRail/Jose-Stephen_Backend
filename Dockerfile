@@ -13,7 +13,7 @@ RAILS_SERVE_STATIC_FILES="true" \
 RAILS_ENV="production" \
 BUNDLE_WITHOUT="development"
 
-COPY GemFile Gemfile.lock ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 COPY . .
