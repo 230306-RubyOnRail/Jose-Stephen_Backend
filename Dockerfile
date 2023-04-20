@@ -5,8 +5,7 @@ RUN apt-get update
 
 WORKDIR /rails
 
-ENV RAILS_ENV="development" \
-
+ENV RAILS_ENV="development"
 
 COPY Gemfile Gemfile.lock
 RUN bundle install
