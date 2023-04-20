@@ -9,7 +9,7 @@ ENV RAILS_ENV="development"
 
 COPY Gemfile Gemfile.lock ./
 
-RUN gem install bundler -v 2.4.9 \
+RUN gem install bundler -v 2.4.9
 RUN bundle install
 
 
