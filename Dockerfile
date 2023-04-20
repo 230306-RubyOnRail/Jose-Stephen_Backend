@@ -8,7 +8,7 @@ WORKDIR /rails
 ENV RAILS_ENV="development" \
 
 
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile Gemfile.lock
 RUN bundle install
 
 COPY . .
