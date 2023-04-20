@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   resources :users
   resources :reimbursements
 
-  root "/"
-
   get 'users/index'
   get 'reimbursements/index'
 
