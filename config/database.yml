@@ -13,7 +13,7 @@ development:
   <<: *default
   adapter: postgresql
   database: postgres
-  host: 172.31.44.96
+  host: 3.21.55.187
   port: 8000
   username: stephen
   password: secretpassword
