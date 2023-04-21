@@ -34,3 +34,5 @@
 
 # Ignore IntelliJ idea directory
 /.idea
+.env
+/node_modules/

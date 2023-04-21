@@ -25,8 +25,22 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  adapter: postgresql
+  database: postgres
+  host: localhost
+  port: 5432
+  username: stephen
+  password: secretpassword
+  pool: 10
+  timeout: 5000
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: postgres
+  host: localhost
+  port: 5432
+  username: stephen
+  password: secretpassword
+  pool: 10
+  timeout: 5000
