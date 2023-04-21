@@ -14,7 +14,7 @@ development:
   adapter: postgresql
   database: postgres
   host: localhost
-  port: 5432
+  port: 3000
   username: stephen
   password: secretpassword
   pool: 10
