@@ -13,7 +13,7 @@ development:
   <<: *default
   adapter: postgresql
   database: rails-react-p2
-  host: rails-react-p2.c5bmt0fb2s4j.us-east-2.rds.amazonaws.com
+  host: localhost
   port: 5432
   username: postgres
   password: secretpassword
@@ -27,7 +27,7 @@ test:
   <<: *default
   adapter: postgresql
   database: rails-react-p2
-  host: rails-react-p2.c5bmt0fb2s4j.us-east-2.rds.amazonaws.com
+  host: localhost
   port: 5432
   username: postgres
   password: secretpassword
@@ -38,7 +38,7 @@ production:
   <<: *default
   adapter: postgresql
   database: rails-react-p2
-  host: rails-react-p2.c5bmt0fb2s4j.us-east-2.rds.amazonaws.com
+  host: localhost
   port: 5432
   username: postgres
   password: secretpassword
