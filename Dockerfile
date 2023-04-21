@@ -1,7 +1,7 @@
 ARG RUBY_VERSION=3.0.2
 FROM ruby:$RUBY_VERSION
 
-RUN apt-get update
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 
 WORKDIR /rails
 
