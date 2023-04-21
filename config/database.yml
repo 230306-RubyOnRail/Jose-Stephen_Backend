@@ -14,7 +14,7 @@ development:
   adapter: postgresql
   database: postgres
   host: 3.21.55.187
-  port: 8000
+  port: 5432
   username: stephen
   password: secretpassword
   pool: 10
