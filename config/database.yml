@@ -13,7 +13,7 @@ development:
   <<: *default
   adapter: postgresql
   database: postgres
-  host: localhost
+  host: 172.31.44.96
   port: 3000
   username: stephen
   password: secretpassword
